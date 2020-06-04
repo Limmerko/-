@@ -1,0 +1,31 @@
+<div>
+    <h3>WORKS</h3>
+    <table class="table table-striped">
+        <thead>
+            <th scope="col">
+                ID
+            </th>
+            <th scope="col">
+                ADDRESS
+            </th>
+            <th scope="col">
+                PHONE
+            </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let work of works">
+                <td scope="col">
+                    <a [routerLink]="['/works', work.id]">
+                        {{work.id}}
+                    </a>
+                </td>
+                <td scope="col">
+                    {{work.address}}
+                </td>
+                <td scope="col">
+                    {{work.phone}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

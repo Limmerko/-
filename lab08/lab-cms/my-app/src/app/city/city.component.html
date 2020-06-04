@@ -1,0 +1,25 @@
+<div>
+    <h3>CITIES</h3>
+    <table class="table table-striped">
+        <thead>
+            <th scope="col">
+                ID
+            </th>
+            <th scope="col">
+                NAME
+            </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let city of cities">
+                <td scope="col">
+                    <a [routerLink]="['/cities', city.id]">
+                        {{city.id}}
+                    </a>
+                </td>
+                <td scope="col">
+                    {{city.name}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
