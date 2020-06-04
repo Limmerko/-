@@ -1,0 +1,37 @@
+<div>
+    <h3>PEOPLE</h3>
+    <table class="table table-striped">
+        <thead>
+            <th scope="col">
+                ID
+            </th>
+            <th scope="col">
+                NAME
+            </th>
+            <th>
+                CITY
+            </th>
+            <th>
+                WORK
+            </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let person of people">
+                <td scope="col">
+                    <a [routerLink]="['/people', person.id]">
+                        {{person.id}}
+                    </a>
+                </td>
+                <td scope="col">
+                    {{person.name}}
+                </td>
+                <td scope="col">
+                    {{person.city.name}}
+                </td>
+                <td scope="col">
+                    {{person.work.address}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

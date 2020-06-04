@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "people",
+  "info": {
+    "name": "person"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "city": {
+      "model": "city",
+      "via": "people"
+    },
+    "work": {
+      "model": "work",
+      "via": "people"
+    }
+  }
+}
